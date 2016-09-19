@@ -1,0 +1,11 @@
+Set WshNet = CreateObject("WScript.Network")
+
+Set WshNetwork = CreateObject("WScript.Network")
+
+WshNetwork.RemoveNetworkDrive "Z:","True","True"
+
+WshNet.MapNetworkDrive "Z:","\\servername\sharename","True","username","password"
+
+WshNetwork.AddWindowsPrinterConnection "\\servername\printername"
+
+WshNetwork.SetDefaultPrinter "\\servername\printername"
